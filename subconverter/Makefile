@@ -5,13 +5,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=subconverter
-PKG_BASE_VERSION:=0.7.0
+PKG_BASE_VERSION:=1.7.0
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/WYC-2020/subconverter.git
-PKG_SOURCE_DATE:=2021-09-20
-PKG_SOURCE_VERSION:=13f5477d41e4da75f90b72ae5f5aee9ecb79211b
+PKG_SOURCE_URL:=https://github.com/tindy2013/subconverter.git
+PKG_SOURCE_DATE:=2021-10-05
+PKG_SOURCE_VERSION:=b972dfaa56f19ca6c45fe3ae98e13da89fd0a836
 #PKG_MIRROR_HASH:=9b12004a3cd78c6803075a2f99431f7766a157993447eec5032d0d0d3d705979
 
 PKG_VERSION:=$(PKG_BASE_VERSION)-$(PKG_SOURCE_DATE)-$(call version_abbrev,$(PKG_SOURCE_VERSION))
@@ -30,7 +30,7 @@ define Package/subconverter
   SECTION:=utils
   CATEGORY:=Utilities
   TITLE:=Utility to convert between various subscription format
-  URL:=https://github.com/WYC-2020/subconverter
+  URL:=https://github.com/tindy2013/subconverter
   DEPENDS:=+libpthread +libstdcpp +libevent2 +libyaml-cpp +libpcre2 +libcurl +zlib
 endef
 
