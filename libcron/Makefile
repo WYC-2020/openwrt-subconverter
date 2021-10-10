@@ -24,14 +24,14 @@ CMAKE_INSTALL:=1
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
-define Package/libcron
+define Package/$(PKG_NAME)
   SECTION:=lib
   CATEGORY:=Libraries
   URL:=https://github.com/PerMalmberg/libcron
   TITLE:=A C++ scheduling library using cron formatting
 endef
 
-define Package/libcron/description
+define Package/$(PKG_NAME)/description
   Libcron offers an easy to use API to add callbacks with corresponding cron-formatted strings.
 endef
 
@@ -43,4 +43,4 @@ define Build/Install
 	$(CP) $(PKG_BUILD_DIR)/libcron/externals/date/include/* $(PKG_INSTALL_DIR)/usr/include/
 endef
 
-$(eval $(call BuildPackage,libcron))
+$(eval $(call BuildPackage,$(PKG_NAME)))

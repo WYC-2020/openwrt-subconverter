@@ -21,7 +21,7 @@ CMAKE_INSTALL:=1
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
-define Package/quickjspp
+define Package/$(PKG_NAME)
   SECTION:=lib
   CATEGORY:=Libraries
   URL:=https://github.com/ftk/quickjspp
@@ -30,7 +30,7 @@ define Package/quickjspp
   PROVIDES:=quickjs
 endef
 
-define Package/quickjspp/description
+define Package/$(PKG_NAME)/description
   QuickJSPP is QuickJS wrapper for C++. It allows you to easily embed
   Javascript engine into your program.
 endef
@@ -43,4 +43,4 @@ define Build/Install
 	$(CP) $(PKG_BUILD_DIR)/quickjs/quickjs*.h $(PKG_INSTALL_DIR)/usr/include/quickjs/
 endef
 
-$(eval $(call BuildPackage,quickjspp))
+$(eval $(call BuildPackage,$(PKG_NAME)))

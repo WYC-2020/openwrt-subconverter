@@ -9,9 +9,9 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/Tencent/rapidjson.git
-PKG_SOURCE_DATE:=2021-08-13
-PKG_SOURCE_VERSION:=00dbcf2c6e03c47d6c399338b6de060c71356464
-PKG_MIRROR_HASH:=9c600748a8e6151341dd92be628f0a21263763e588b6d1c87dc834679da0714a
+PKG_SOURCE_DATE:=2021-09-24
+PKG_SOURCE_VERSION:=2e8f5d897d9d461a7273b4b812b0127f321b1dcf
+PKG_MIRROR_HASH:=c63ccf97b7eac2a149c7ca8d1669992551bc4b491108b4e4d4de92f2816aa70d
 
 PKG_LICENSE:=BSD 3-Clause
 PKG_LICENSE_FILES:=LICENSE
@@ -27,15 +27,15 @@ CMAKE_OPTIONS+= -DRAPIDJSON_BUILD_DOC=OFF \
 	-DRAPIDJSON_BUILD_EXAMPLES=OFF \
 	-DRAPIDJSON_BUILD_TESTS=OFF
 
-define Package/rapidjson
+define Package/$(PKG_NAME)
   SECTION:=lib
   CATEGORY:=Libraries
   URL:=https://github.com/Tencent/rapidjson
   TITLE:=rapidjson JSON parser/generator for C++
 endef
 
-define Package/rapidjson/description
+define Package/$(PKG_NAME)/description
   A fast JSON parser/generator for C++ with both SAX/DOM style API
 endef
 
-$(eval $(call BuildPackage,rapidjson))
+$(eval $(call BuildPackage,$(PKG_NAME)))
